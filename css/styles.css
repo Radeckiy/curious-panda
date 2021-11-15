@@ -1,0 +1,367 @@
+.demo-primary  {
+    background-color: #4285f4;
+}
+.demo-success  {
+    background-color: #0f9d58;
+}
+.demo-info  {
+    background-color: #3498db;
+}
+.demo-warning  {
+    background-color: #ff5722;
+}
+.demo-danger  {
+    background-color: #f44336;
+}
+.demo-material-red  {
+    background-color: #f44336;
+}
+.demo-material-pink  {
+    background-color: #e91e63;
+}
+.demo-material-purple  {
+    background-color: #9c27b0;
+}
+.demo-material-deeppurple  {
+    background-color: #673ab7;
+}
+.demo-material-indigo  {
+    background-color: #3f51b5;
+}
+.demo-material-lightblue  {
+    background-color: #03a9f4;
+}
+.demo-material-cyan  {
+    background-color: #00bcd4;
+}
+.demo-material-teal  {
+    background-color: #009688;
+}
+.demo-material-lightgreen  {
+    background-color: #8bc34a;
+}
+.demo-material-lime  {
+    background-color: #cddc39;
+}
+.demo-material-lightyellow  {
+    background-color: #ffeb3b;
+    color: #4D4D4D;
+}
+.demo-material-orange  {
+    background-color: #ff9800;
+}
+.demo-material-deeporange  {
+    background-color: #ff5722;
+}
+.demo-material-grey  {
+    background-color: #9e9e9e;
+}
+.demo-material-bluegrey  {
+    background-color: #607d8b;
+}
+.demo-material-brown  {
+    background-color: #795548;
+}
+.demo-material-lightgrey  {
+    background-color: #ececec;
+    color: #4D4D4D;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script|Roboto);
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    background-color: #8bc34a;
+    padding: 20px;
+}
+
+.panda {
+    position: relative;
+    width: 350px;
+    top: 80px;
+    margin: 80px auto;
+}
+
+.face {
+    width: 300px;
+    height: 300px;
+    background: #fff;
+    border-radius: 100%;
+    margin: 6% auto;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    z-index: 50;
+    position: relative;
+}
+
+.ear, .ear:after {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background: #000;
+    z-index: 5;
+    border: 10px solid #fff;
+    left: 20px;
+    top: -20px;
+    border-radius: 100%;
+}
+.ear:after {
+    content: '';
+    top: -5px;
+    left: 200px;
+}
+
+.eye-shade {
+    background: #000;
+    width: 60px;
+    height: 90px;
+    margin: 10px;
+    position: absolute;
+    top: 65px;
+    left: 30px;
+    transform: rotate(220deg);
+    border-radius: 35px/30px 35px 40px 45px;
+}
+.eye-shade.rgt {
+    transform: rotate(140deg);
+    left: 190px;
+}
+
+.eye-white {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background: #fff;
+    z-index: 500;
+    left: 45px;
+    top: 117px;
+    overflow: hidden;
+}
+.eye-white.rgt {
+    right: 45px;
+    left: auto;
+}
+
+.eye-ball {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    left: 20px;
+    top: 20px;
+    max-width: 10px;
+    max-height: 10px;
+    transition: 0.1s;
+}
+.eye-ball:after {
+    content: '';
+    background: #000;
+    position: absolute;
+    border-radius: 100%;
+    right: 0;
+    bottom: 0px;
+    width: 20px;
+    height: 20px;
+}
+
+.nose {
+    position: absolute;
+    height: 45px;
+    width: 50px;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 50px 20px/30px 15px;
+    transform: rotate(15deg);
+    background: #000;
+}
+
+.body {
+    background: #fff;
+    position: absolute;
+    top: 150px;
+    left: 30px;
+    border-radius: 110px 110px 110px 110px/136px 136px 106px 106px;
+    width: 300px;
+    height: 480px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hand, .hand:after, .hand:before {
+    width: 30px;
+    height: 50px;
+    border-radius: 50px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+    background: #000;
+    margin: 5px;
+    position: absolute;
+    top: -25px;
+    left: 31%;
+}
+.hand:after, .hand:before {
+    content: '';
+    top: -5px;
+    left: 11px;
+}
+.hand:before {
+    left: 26px;
+}
+
+.hand.rgt, .rgt.hand:after, .rgt.hand:before {
+    left: 63%;
+}
+.hand.rgt:after, .hand.rgt:before {
+    left: 11px;
+}
+.hand.rgt:before {
+    left: 26px;
+}
+
+.foot {
+    top: 170%;
+    left: -10px;
+    position: absolute;
+    background: #000;
+    z-index: 1400;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 40px 40px 39px 40px/26px 26px 63px 63px;
+    width: 88px;
+    height: 126px;
+}
+.foot:after {
+    content: '';
+    width: 55px;
+    height: 65px;
+    background: #222;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.foot .finger, .foot .finger:after, .foot .finger:before {
+    position: absolute;
+    width: 25px;
+    height: 35px;
+    background: #222;
+    border-radius: 100%;
+    top: 10px;
+    right: 5px;
+}
+.foot .finger:after, .foot .finger:before {
+    content: '';
+    right: 30px;
+    width: 20px;
+    top: 0;
+}
+.foot .finger:before {
+    right: 55px;
+    top: 5px;
+}
+
+.foot.rgt {
+    left: auto;
+    right: -10px;
+}
+.foot.rgt .finger, .foot.rgt .finger:after, .foot.rgt .finger:before {
+    left: 5px;
+    right: auto;
+}
+.foot.rgt .finger:after {
+    left: 30px;
+    right: auto;
+}
+.foot.rgt .finger:before {
+    left: 55px;
+    right: auto;
+}
+
+.question-frame {
+    min-height: 55%;
+}
+
+form {
+    display: block;
+    padding: 20px 40px;
+    background: #fff;
+    max-width: 1200px;
+    height: 380px;
+    margin: auto;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+    position: relative;
+    transform: translateY(-100px);
+    z-index: 500;
+    border: 1px solid #eee;
+}
+form.up {
+    transform: translateY(-180px);
+}
+
+h1 {
+    color: #ecbf2b;
+}
+
+.btn {
+    background: #fff;
+    padding: 10px;
+    bottom: 0px;
+    border: 1px solid #ecbf2b;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 50px #ecbf2b inset;
+    color: #fff;
+    font-family: 'Dancing Script', cursive;
+    font-size: 16pt;
+}
+
+.btn:hover {
+    box-shadow: 0 0 #cea822 inset;
+    color: #cea822;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.wrong-entry .alert {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+@-webkit-keyframes eye-blink {
+    to {
+        height: 30px;
+    }
+}
+@keyframes eye-blink {
+    to {
+        height: 30px;
+    }
+}
+@-webkit-keyframes wrong-log {
+    0%, 100% {
+        left: 0px;
+    }
+    20% , 60% {
+        left: 20px;
+    }
+    40% , 80% {
+        left: -20px;
+    }
+}
+@keyframes wrong-log {
+    0%, 100% {
+        left: 0px;
+    }
+    20% , 60% {
+        left: 20px;
+    }
+    40% , 80% {
+        left: -20px;
+    }
+}
